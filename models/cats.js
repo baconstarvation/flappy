@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://heroku_app22022794:onbv16pec74df9bknirkhao0qj@ds027789.mongolab.com:27789/heroku_app22022794' || 'localhost');
+mongoose.connect(process.env.MONGOLAB_URI || 'localhost');
 
 var catSchema = mongoose.Schema({
   age: Number,
@@ -9,12 +9,3 @@ var catSchema = mongoose.Schema({
 
 var Cats = mongoose.model('Cats', catSchema);
 module.exports = Cats;
-
-
-
-
-
-
-
-
-

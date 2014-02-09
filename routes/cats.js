@@ -9,7 +9,7 @@ exports.list = function(req, res) {
 			return console.log("error", cats);
 		}
 		else {
-			res.render('cats', {cats: response, title: 'Harem of Kitties'});
+			res.render('cats', {cats: response, title: 'Flappy Bird: A Fappy, Happy Man'});
 		}
 	});
 };
